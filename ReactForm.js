@@ -82,11 +82,11 @@ function FormApp() {
             onChange={handleChange}
             placeholder="Enter your Phone Number"
             pattern="[0-9]{10}"
-            title="Please enter a 10-digit number."
+            title="Please enter a 10-digit number." disabled={person.id?true:false}
           />
 
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" value={person.email} name="email" onChange={handleChange} placeholder="Enter your email" required />
+          <input type="email" id="email" value={person.email} name="email" onChange={handleChange} placeholder="Enter your email" disabled={person.id?true:false} required />
 
           {/* Radio buttons */}
           <label>Gender:</label>
